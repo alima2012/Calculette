@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-user-drag: none;
+  -webkit-app-region: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: #fff;
+  display: grid;
+  place-content: center;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  font-size: 2rem;
+}
+.container{
+  height: 80vh;
+  width: 50vh;
+  background-color: rgb(198, 235, 241);
+  border-radius: 1rem;
+  padding: 1rem;
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(50,50,50,0.75);
+  -moz-box-shadow: 7px 7px 5px 0px rgba(50,50,50,0.75);
+  box-shadow: 7px 7px 5px 0px rgba(50,50,50,0.75);
+}
+.content{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(6,1fr);
+  gap: 10px;
+}
+.fond_ecran{
+  grid-column: 1 / -1;
+  color: #000;
+  text-align: right;
+  padding: 0.5rem;
+  font-size: 4rem;
+  overflow: hidden;
+}
+.btn{
+  display: grid;
+  place-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+  color: rgb(54,52,52);
+  cursor: pointer;
+  font-weight: bold;
+}
+.btn:hover{
+  background-color: gray;
+}
+.light-gray{
+  background-color: gray;
+  color: black;
+}
+.light-gray:hover{
+  background-color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.operator{
+  background-color: orange;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.operator:hover{
+  background-color: #fff;
+  color: orange;
+}
+.zero{
+  grid-column: 1 / span 2;
+  border-radius: 25px;
+  place-content: unset;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  padding-left: 2rem;
 }
